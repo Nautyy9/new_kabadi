@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /** normal text color */
+    --color-text-base: 38, 38, 40;
+    /** for when the background is base */
+    --color-text-inverted: 254, 249, 240;
+    /** base text but of muted color */
+    --color-text-muted: 67, 72, 84;
+    --color-text-accent: 254, 249, 240;
+    --color-text-accent-inverted: 68, 179, 31;
+    /** bg for button  accent is the base and hover we had is for base , for muted button we need to add the hover on the go inside the class */
+    --color-button-accent: 68, 179, 31;
+
+    --color-button-accent-hover: 68, 179, 31;
+    --color-button-muted: 38, 38, 40;
+    --color-button-muted-hover: 38, 38, 40;
+    /** this is for the cards */
+    --color-card-accent: 68, 179, 31;
+    --color-card-accent-hover: 68, 179, 31;
+    --color-card-muted: 38, 38, 40;
+    --color-card-muted-hover: 38, 38, 40;
+
+    /** shadow */
+    --shadow-base: 38, 38, 40;
+    --shadow-inverted: 254, 249, 240;
+    --shadow-muted: 254, 249, 240;
+    --shadow-accent: 68, 179, 31;
+
+    /** border */
+    --border-base: 38, 38, 40;
+    --border-inverted: 254, 249, 240;
+    --border-muted: 67, 72, 84;
+    --border-accent: 68, 179, 31;
+
+    --color-fill: 254, 249, 240;
+  }
+  .dark_one {
+    --color-text-base: 254, 249, 240;
+    --color-text-inverted: 20, 19, 19;
+    --color-text-muted: 254, 249, 240;
+    --color-text-accent: 38, 38, 40;
+
+    --color-button-accent: 68, 179, 31;
+    --color-button-accent-hover: 68, 179, 31;
+    --color-button-muted: 254, 249, 240;
+    --color-button-muted-hover: 254, 249, 240;
+
+    --color-card-accent: 68, 179, 31;
+    --color-card-accent-hover: 68, 179, 31;
+    --color-card-muted: 38, 38, 40;
+    --color-card-muted-hover: 38, 38, 40;
+
+    --shadow-inverted: 255, 255, 255;
+    --shadow-base: 38, 38, 40;
+    --shadow-muted: 255, 255, 255;
+    --shadow-accent: 68, 179, 31;
+
+    --border-inverted: 38, 38, 40;
+    --border-base: 255, 255, 255;
+    --border-muted: 67, 72, 84;
+    --border-accent: 68, 179, 31;
+
+    --color-fill: 20, 19, 19;
+  }
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.7em;
+  line-height: 30px;
+  word-spacing: -2px;
+}
+h4 {
+  font-size: 1.563em;
+}
+h5 {
+  font-size: 1.2505em;
+}
+h6 {
+  font-size: 0.97825em;
+}
+a,
+button,
+p {
+  font-size: 0.8em;
+  line-height: 18px;
+}
+.ham_bar {
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked ~ .top_bar {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(4px, 0px);
+}
+
+input[type="checkbox"]:checked ~ .mid_bar {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+input[type="checkbox"]:checked ~ .bottom_bar {
+  transform-origin: bottom;
+  width: 18px;
+  transform: translate(13px, -5px) rotatez(45deg);
+}
